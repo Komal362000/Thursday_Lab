@@ -1,0 +1,51 @@
+/*Lab QUE5: WAP to accept no from user in array and find out average and sum of array numbers.
+ 
+ */
+
+package Thusday_Lab;
+
+import java.util.Scanner;
+
+public class Question5_29 
+{
+
+	public static void main(String[] args) 
+	{
+		Question5_29 aa=new Question5_29();
+		int arr[]=aa.accept();            //function used for accept value
+		aa.AvgSum(arr);           //function for calculate sum of array and  average
+		
+
+	}
+
+	public int[] accept()
+	{
+		Scanner sc=new Scanner(System.in);
+		int size,i;
+		System.out.println("Enter the size");
+		size=sc.nextInt();
+		int number[]=new int[size];
+		System.out.println("Enter "+size+" Numbers:");
+		for(i=0;i<size;i++)
+		{
+			number[i]=sc.nextInt();
+		}
+		return number;
+	}
+	
+	public void  AvgSum(int number[])
+	{
+		int sum=0;
+		float average=0 ;
+		int size=number.length;
+		for(int i=0;i<number.length;i++)
+		{
+		sum += number[i];
+		}
+		System.out.println("sum of array" +sum);
+		 average = (float)sum /size;
+        System.out.println("Average:"+average);
+	}
+	
+
+}
