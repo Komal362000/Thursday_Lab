@@ -1,0 +1,80 @@
+/*Q2)"Multilevel:
+
+WAP to create a class Reverse No, second class SOD ,
+ Third class use both the class property and display the output
+"
+*/
+
+
+
+package Thusday_Lab_13_10;
+
+import java.util.Scanner;
+
+public class ReverseQ1 
+{
+	
+	static Scanner sc=new Scanner(System.in);
+	
+		 static int reverse()
+		{
+			 int num,r,rev=0;
+			System.out.println("Enter the number");
+			num=sc.nextInt();
+			int number=num; //for store the number came from user
+			while(num>0) //we take while because we want stop this loop when number is greater than 0 
+			{
+				r=num%10;   //r for remainder
+				num=num/10;
+				rev=rev*10+r;
+			}
+			System.out.println("normal number = "+number+" reverese number = "+rev);
+			return number;
+		}
+
+}
+
+
+
+
+
+package Thusday_Lab_13_10;
+
+import java.util.Scanner;
+
+public class SumOfDigit extends ReverseQ1 
+{
+
+	static int sum_of_digit()
+	{
+		int num=reverse(); //call here because we want same number from user and only one time
+		
+		
+		int sum=0,d;
+		while(num!=0) //we take while because we want stop this loop when number is  not equal to  0 
+		{
+			d=num%10;   
+			sum=sum+d;
+			num=num/10;
+		}
+		System.out.println("sum of digit="+sum);
+		return sum;
+	}
+	
+			
+}
+
+
+
+package Thusday_Lab_13_10;
+
+public class rev_SOD_main extends SumOfDigit {
+
+	public static void main(String[] args)
+	{
+
+		sum_of_digit();
+
+	}
+
+}
