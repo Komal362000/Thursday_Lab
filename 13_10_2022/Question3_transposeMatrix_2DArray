@@ -17,28 +17,28 @@ After changing the rows and columns of the said array:
 package Thusday_Lab_13_10;
 import java.util.Scanner;
 
-public class Array_2d 
+public class Array_2d          //first class
 {
 	
 	static Scanner sc=new Scanner(System.in);
-	static void array()
+	static void array()                 //method
 	{
-		int row,col,i,j;
+		int row,col,i,j;                //we take row col for axcept size of array from user
 		
 		System.out.println("plz Enter the row");
 		row=sc.nextInt();
 		System.out.println("Enter the column");
 		col=sc.nextInt();
-		int arr[][]=new int[row][col];
-		int t[][] = new int[col][row];
+		int arr[][]=new int[row][col];                     //two dimational array
+		int t[][] = new int[col][row];                     //we want this for past above arrary
 		System.out.println("Enter elements ");
-		for(i=0;i<row;i++)
+		for(i=0;i<row;i++)                       //accept array
 		{
 			for(j=0;j<col;j++)
 				arr[i][j]=sc.nextInt();
 		}
 		
-		System.out.println("original  array");
+		System.out.println("original  array");   //display array
 		for(i=0;i<row;i++)
 		{	
 			for(j=0;j<col;j++)
@@ -48,14 +48,14 @@ public class Array_2d
 		System.out.println();
 		}
 			
-		//transfer one array into another
+		                                     //transfer one array into another
 		for(i=0;i<row;i++)
 		{
 			for(j=0;j<col;j++)
 				t[j][i]=arr[i][j];
 		}
 		
-		System.out.println(" array");
+		System.out.println(" array");               //display tranaferd array
 		for(i=0;i<col;i++)
 		{
 			for(j=0;j<row;j++)
@@ -69,7 +69,7 @@ public class Array_2d
 	
 	public static void main(String[] args)
 	{
-		Array_2d a=new Array_2d();
-		a.array();
+		Array_2d a=new Array_2d();     //create object
+		a.array();                        ///call method
 	}
 }
