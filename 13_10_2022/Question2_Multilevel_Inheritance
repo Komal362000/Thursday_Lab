@@ -11,20 +11,20 @@ package Thusday_Lab_13_10;
 
 import java.util.Scanner;
 
-public class ReverseQ1 
+public class ReverseQ1                         //first class
 {
 	
 	static Scanner sc=new Scanner(System.in);
 	
-		 static int reverse()
+		 static int reverse()                      //method
 		{
 			 int num,r,rev=0;
 			System.out.println("Enter the number");
 			num=sc.nextInt();
-			int number=num; //for store the number came from user
-			while(num>0) //we take while because we want stop this loop when number is greater than 0 
+			int number=num;                                 //for store the number came from user
+			while(num>0)                                //we take while because we want stop this loop when number is greater than 0 
 			{
-				r=num%10;   //r for remainder
+				r=num%10;                           //r for remainder
 				num=num/10;
 				rev=rev*10+r;
 			}
@@ -42,16 +42,16 @@ package Thusday_Lab_13_10;
 
 import java.util.Scanner;
 
-public class SumOfDigit extends ReverseQ1 
+public class SumOfDigit extends ReverseQ1        //second class extends first class
 {
 
-	static int sum_of_digit()
+	static int sum_of_digit()                    //method
 	{
-		int num=reverse(); //call here because we want same number from user and only one time
+		int num=reverse();                       //call here because we want same number from user and only one time
 		
 		
 		int sum=0,d;
-		while(num!=0) //we take while because we want stop this loop when number is  not equal to  0 
+		while(num!=0)                           //we take while because we want stop this loop when number is  not equal to  0 
 		{
 			d=num%10;   
 			sum=sum+d;
@@ -68,12 +68,13 @@ public class SumOfDigit extends ReverseQ1
 
 package Thusday_Lab_13_10;
 
-public class rev_SOD_main extends SumOfDigit {
+public class rev_SOD_main extends SumOfDigit               //third class extends the second class and axcess property of that
+{
 
 	public static void main(String[] args)
 	{
 
-		sum_of_digit();
+		sum_of_digit();                           //call method from second class
 
 	}
 
