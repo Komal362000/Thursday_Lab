@@ -15,19 +15,19 @@ public class Sum_of_positive_number
 	private static final String countinue = null;
 	Scanner sc=new Scanner(System.in);
 	
-	void SOPN()
+	void SOPN()                    //method
 	{
 		int size,i,sum=0;
 		System.out.println("enter how many number u want to display");
 		size=sc.nextInt();
 		int arr[]=new int[size];
 		System.out.println("enter the  numbers ");
-		for(i=0;i<size;i++)
+		for(i=0;i<size;i++)   //accept number
 		{
 			arr[i]=sc.nextInt();
-			if(arr[i]>0)
+			if(arr[i]>0)    //if number is greater than 0 means it is negative so this can not be added
 			{
-				sum = sum + arr[i];
+				sum = sum + arr[i];             //add postive numbers
 			}
 		}
 		System.out.println("sum of positive numbers is = "+sum);
