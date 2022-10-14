@@ -7,23 +7,23 @@ package Thusday_Lab_13_10;
 
 import java.util.Scanner;
 
-public class Palindrom1 
+public class Palindrom1 // first Class
 {
 	  
-		static Scanner sc=new Scanner(System.in);
-		static void palindrom()
+		static Scanner sc=new Scanner(System.in);   //we use scanner class for accept from user
+		static void palindrom()             //method
 		{
 			int num,r,rev=0;
 			System.out.println("Enter the number");
 			num=sc.nextInt();
-			int number=num; //for store the number came from user
-			while(num>0) //we take while because we want stop this loop when number is greater than 0 
+			int number=num;                 //for store the number came from user
+			while(num>0)                   //we take while because we want stop this loop when number is greater than 0 
 			{
-				r=num%10;   //r for remainder
+				r=num%10;               //r for remainder
 				num=num/10;
 				rev=rev*10+r;
 			}
-			if(number==rev) //we use ifelse for check the  number is equal to reverse number or not
+			if(number==rev)                    //we use ifelse for check the  number is equal to reverse number or not
 			{
 				System.out.println(" number is palindrome");
 			}else
@@ -40,13 +40,13 @@ public class Palindrom1
 
 package Thusday_Lab_13_10;
 
-public class PalindromMain extends Palindrom1
+public class PalindromMain extends Palindrom1   //second class and extends the 1st class
 {
 
 	public static void main(String[] args) 
 	{
 		
-		palindrom();
+		palindrom();                   //call method from first class
 
 	}
 
