@@ -1,0 +1,74 @@
+package T_l_27_10_2022_oops_Concept;
+
+import java.util.Scanner;
+
+class Accept extends Private_fields implements Main_Menu         // extend the class  Private_fields implements the interface  Main_Menu
+{
+	Scanner sc=new Scanner(System.in);
+	String language;
+	char card;
+	int pincode,ch;
+	Private_fields obj=new Private_fields();     // for accept the private field we crete object of that class
+	
+
+	void accept()          //accept for normal details
+	{
+		System.out.println("inster the card");
+		card=sc.next().charAt(0);
+		if(card =='y' || card =='Y' )         //if user insert card then and only then user start this process
+		{
+		System.out.println("enter the pin");
+		pincode=sc.nextInt();
+		obj.setPin(pincode);
+		System.out.println("enter the language\nMarathi\nEnglish\nHindi");
+		language=sc.next();
+		} 
+	}
+	@Override                //override method from interface
+	public void main_menu() 
+	{
+		int user_bal = 0;
+		char ans;
+		
+		do
+		{
+			accept();                //call accept method from same class
+			System.out.println("Main Menu\n1.Cash Withrawal \n2.Deposit Cash. ");
+			ch=sc.nextInt();
+			switch(ch)
+			{
+			case 1:	         // Cash Withdraw
+				System.out.println("Enter the Amount you want to Cash Withdraw: ");
+				user_bal = sc.nextInt();
+				obj.setAc_baldebit(user_bal);
+				if (obj.getAc_baldebit() >= 0) 
+				{
+					System.out.println("The Account balance is Rs. " + obj.getAc_baldebit());
+				} 
+				else
+				{
+					System.out.println("The Account does nit have Sufficiant Funds to Withdraw");
+				}
+				break;
+			case 2:                              //Deposit Cash
+				System.out.println("Enter the Amount you want to Deposit:  ");
+				user_bal = sc.nextInt();
+				obj.setAc_balcredit(user_bal);
+				System.out.println("Deposit amout is Rs." + user_bal);
+				System.out.println("The Account balance is Rs. " + obj.getAc_balcredit());
+				break;
+			default:
+				System.out.println("Invalid choice");
+
+			}
+			System.out.println("Do you want to do any another transtions y/n");
+			ans = sc.next().charAt(0);
+
+		} while (ans == 'Y' || ans == 'y');
+
+		System.out.println("The acccount balance is =" + obj.getAc_bal());
+		
+		
+	}
+	
+}
