@@ -1,0 +1,10 @@
+
+//crete method main_menu in interface
+
+package T_l_27_10_2022_oops_Concept;
+
+public interface Main_Menu 
+{
+	void main_menu();
+
+}
