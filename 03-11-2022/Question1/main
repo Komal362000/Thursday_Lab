@@ -1,0 +1,22 @@
+/*
+ Ques 1. Write a program that creates 2 threads -
+  each displaying a message (Pass the message as a parameter to the constructor).
+  The threads should display the messages continuously till the user presses any key.
+ */
+
+
+package T_L_03_11_2022;
+
+public class Question1
+{
+
+	// main method
+	public static void main(String[] args)
+	{
+		Thread_Infinity ob = new Thread_Infinity("ACTIVE"); // passing the argument to the constructor
+		Thread_Infinity ob1 = new Thread_Infinity("UNACTIVE"); // passing the argument to the constructor
+		System.out.println("Display Output Here..");
+		ob.start(); // calling the run method
+		ob1.start(); // calling the run method
+	}
+}
