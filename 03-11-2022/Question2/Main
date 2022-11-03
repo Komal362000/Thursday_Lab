@@ -2,7 +2,7 @@ package T_L_03_11_2022;
 
 
 
-class Main_Class // main class
+class Main // main class run here 
 {
 	public static void main(String[] args) // main method
 	{
