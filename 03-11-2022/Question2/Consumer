@@ -1,0 +1,28 @@
+/*Write a Java program using Synchronized Threads, which demonstrates Producer Consumer concept. 
+Producer Consumer problem: The producer-consumer problem is the classical concurrency of a multi process synchronization problem. 
+It is also known as bound-buffer problem. The problem describes two processes, the producer and the consumer, 
+who share a common, fixed-size buffer used as a queue. The producer generates a piece of data, put it into the buffer and starts again.
+*/
+
+package T_L_03_11_2022;
+
+public class Consumer  extends Thread {
+	
+	Problem_Class Shop;	                                          //declared variable for using the class name.........
+	      int num,value = 0,i;                                  //declared varaible and data type......
+	     
+	                                                     // construtor.............
+	      public Consumer2(Problem_Class c, int number)
+	      {
+	            Shop = c;
+	            this.num = number;                             //use this keyword for use the same class variable...........
+	      }
+	      public void run()//create run method......
+	      {
+	            for ( i = 0; i < 10; i++)                                             //using the for loop
+	            {
+	                  System.out.println("Consumed value " + this.num+ " got: " + value);
+	            }
+	      }
+
+}
